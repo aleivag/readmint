@@ -3,7 +3,7 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/readmint.svg)](https://pypi.org/project/readmint)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/readmint.svg)](https://pypi.org/project/readmint)
 
-* * *
+-----
 
 A simple, yet effective way of adding some dynamic properties to you md. 
 
@@ -22,41 +22,29 @@ pip install readmint
 
 ## Using it (api)
 
-```python
+```readmint[python]
 # import the render function
 
-In [1]: from readmint.lib.renderer import render_text, render_file
-        import textwrap
+from readmint.lib.renderer import render_text, render_file
+import textwrap
 
-        print("hello world")
+print("hello world")
 ```
 
-```python
+```readmint[python]
 # render text just rendera passed text
-In [2]: render_text(
-            textwrap.dedent("""
-                dummy text
-                ==========
+render_text(
+    textwrap.dedent("""
+        dummy text
+        ==========
         
-                And this is a code block
+        And this is a code block
         
-                ```readmint[python@local]
-                1+1
-                ```
-            """)
-        )
-
-Out[2]: 
-# dummy text
-
-And this is a code block
-
-```python
-
-In [1]: 1+1
-
-Out[1]: 2
-```
+        ```readmint[python@local]
+        1+1
+        ```
+    """)
+)
 ```
 
 ## License
