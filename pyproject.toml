@@ -31,12 +31,17 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/unknown/readmint#readme"
-Issues = "https://github.com/unknown/readmint/issues"
-Source = "https://github.com/unknown/readmint"
+Documentation = "https://github.com/aleivag/readmint#readme"
+Issues = "https://github.com/aleivag/readmint/issues"
+Source = "https://github.com/aleivag/readmint"
 
 [project.scripts]
 readmint = "readmint.cli:readmint"
+
+[tool.hatch.build]
+include = [
+  'src/**'
+]
 
 [tool.hatch.version]
 path = "src/readmint/__about__.py"
